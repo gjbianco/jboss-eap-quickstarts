@@ -35,7 +35,7 @@ import javax.inject.Qualifier;
  * @author Jason Porter
  */
 @Qualifier
-@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.PARAMETER })
+@Target({ ElementType.TYPE, ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER })
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Spanish {
