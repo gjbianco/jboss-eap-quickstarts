@@ -21,6 +21,7 @@ import javax.inject.Named;
 
 import org.jboss.as.quickstarts.cdi.injection.TranslateService;
 import org.jboss.as.quickstarts.cdi.injection.qualifier.English;
+import org.jboss.as.quickstarts.cdi.injection.qualifier.German;
 import org.jboss.as.quickstarts.cdi.injection.qualifier.Spanish;
 
 /**
@@ -45,6 +46,10 @@ public class TranslationBackingBean {
     @Inject
     @English
     private TranslateService englishTranslateService;
+    
+    @Inject
+    @German
+    private TranslateService germanTranslateService;
 
     public String getSpanishHello() {
         return spanishTranslateService.hello();
@@ -52,5 +57,9 @@ public class TranslationBackingBean {
 
     public String getEnglishHello() {
         return englishTranslateService.hello();
+    }
+    
+    public String getGermanHello() {
+    	return germanTranslateService.hello();
     }
 }
